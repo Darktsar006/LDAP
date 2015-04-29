@@ -1,0 +1,13 @@
+attributeType ( 1.1.2.1.1 NAME 'id'
+	DESC 'le numero de serie'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{32} ) 
+
+attributeType ( 1.1.2.1.2 NAME 'uri'
+	DESC 'URI pour localiser le fihcier'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{255} ) 
+
+objectClass ( 1.1.2.2.1.1 NAME 'GPContainer'
+	DESC 'utilisation des attributs id et uri'
+	SUP top AUXILIARY
+	MAY (id $ uri) ) 
+
